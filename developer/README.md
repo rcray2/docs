@@ -231,7 +231,7 @@ type ServiceManifest {
 
 When it is time to have full participation in the Maana processing network, i.e., having its endpoint services consumed by other services, user interfaces, or automatically based on event subscription, then Maana's CKG must be able to communicate to the service. This means that the service must itself be deployed to a host that is accessible from the Maana cluster, e.g., Heroku, Azure, AWS, on-premise. In this configuration, the service owner is responsible for deploying, monitoring, scaling, securing, etc. the service, since Maana only has knowledge of a GraphQL endpoint URL and the schema it provides.
 
-See the (DEPLOY TO HEROKU TUTORIAL) -- RC To Update
+See the (DEPLOY TO HEROKU TUTORIAL)
 
 ## Stage: Managed Service
 
@@ -274,7 +274,7 @@ The following is an example of how to create a graph with no mutation specified,
 curl -v -H "Content-Type: application/json" -X POST -d "{\"query\": \"mutation { ..... }\"}" http://XXX.XXX.XXX.XXX:8003/graphql
 ```
 
-Maana engineering team is currently implementing authentication functionality, which will be required for all clients. (RC TO UPDATE ALL LINKS
+Maana engineering team is currently implementing authentication functionality, which will be required for all clients.
 *	How to create a graph from a GQL definition (https://confluence.corp.maana.io/display/RD/Maana+Q+programmatic+interface)
 *	How to add instance data
 *	How to query instance data
