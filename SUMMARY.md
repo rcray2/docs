@@ -5,6 +5,7 @@
     * [User Login and Profile](analyst/user-login-and-profile.md)
 * [Developer](developer/README.md)
     * [Bot Actions](developer/botactions.md)
+    * [The Maana Catalog](developer/catalog.md)
 * [Scientist](scientist/README.md)
     * [Bots](scientist/bots.md)
         * [Text Extractor](scientist/textextractor.md)
