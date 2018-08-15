@@ -1,0 +1,1121 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CLI 101 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../prisma.md" />
+    
+    
+    <link rel="prev" href="ui.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Guides to Q
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../analyst/">
+            
+                <a href="../analyst/">
+            
+                    
+                    Analyst
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../analyst/user-login-and-profile.html">
+            
+                <a href="../analyst/user-login-and-profile.html">
+            
+                    
+                    User Login and Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../developer/">
+            
+                <a href="../developer/">
+            
+                    
+                    Developer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../developer/botactions.html">
+            
+                <a href="../developer/botactions.html">
+            
+                    
+                    Bot Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../scientist/">
+            
+                <a href="../scientist/">
+            
+                    
+                    Scientist
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../scientist/bots.html">
+            
+                <a href="../scientist/bots.html">
+            
+                    
+                    Bots
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../scientist/textextractor.html">
+            
+                <a href="../scientist/textextractor.html">
+            
+                    
+                    Text Extractor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../scientist/cognitive-models.html">
+            
+                <a href="../scientist/cognitive-models.html">
+            
+                    
+                    Cognitive Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../administrator/">
+            
+                <a href="../administrator/">
+            
+                    
+                    Administrator
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../administrator/deployment/">
+            
+                <a href="../administrator/deployment/">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../administrator/deployment/azure.html">
+            
+                <a href="../administrator/deployment/azure.html">
+            
+                    
+                    Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../administrator/deployment/self-hosted.html">
+            
+                <a href="../administrator/deployment/self-hosted.html">
+            
+                    
+                    Self Hosted
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../administrator/orchestration.html">
+            
+                <a href="../administrator/orchestration.html">
+            
+                    
+                    Orchestration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../administrator/user-and-policy-management.html">
+            
+                <a href="../administrator/user-and-policy-management.html">
+            
+                    
+                    User and Policy Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../administrator/logging.html">
+            
+                <a href="../administrator/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../administrator/monitoring.html">
+            
+                <a href="../administrator/monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../releasenotes/">
+            
+                <a href="../releasenotes/">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../releasenotes/v3-1-2.html">
+            
+                <a href="../releasenotes/v3-1-2.html">
+            
+                    
+                    v3.1.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../releasenotes/v3-1-1.html">
+            
+                <a href="../releasenotes/v3-1-1.html">
+            
+                    
+                    v3.1.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../releasenotes/v3-1-0.html">
+            
+                <a href="../releasenotes/v3-1-0.html">
+            
+                    
+                    v3.1.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../releasenotes/v3-0-5.html">
+            
+                <a href="../releasenotes/v3-0-5.html">
+            
+                    
+                    v3.0.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ui.html">
+            
+                <a href="ui.html">
+            
+                    
+                    UI 101
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    CLI 101
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../prisma.md">
+            
+                <span>
+            
+                    
+                    Prisma
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../contact.html">
+            
+                <a href="../contact.html">
+            
+                    
+                    Contact
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >CLI 101</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cli-tutorials">CLI Tutorials</h1>
+<p><em>Collection of &apos;Hello World&apos; training to onboard users onto the Maana CLI</em></p>
+<hr>
+<h1 id="drilling-problems">Drilling Problems</h1>
+<p>In this tutorial, we will walk step-by-step for creating <a href="../glossary.html#a" class="glossary-term" title="">a</a> managed graph from <a href="../glossary.html#a" class="glossary-term" title="">a</a> GraphQL definition, loading it with data, adding custom services, and building <a href="../glossary.html#a" class="glossary-term" title="">a</a> knowledge application.</p>
+<h3 id="note---git-is-a-required-prerequisite-for-this-training">Note - GIT is a required prerequisite for this training.</h3>
+<p>To download GIT please use the following instructions:
+<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></p>
+<h2 id="clone-repo">Clone Repo</h2>
+<ol>
+<li>Nagivate to <a href="https://github.com/maana-io/Q-tutorials" target="_blank">https://github.com/maana-io/Q-tutorials</a></li>
+<li>Open up terminal or console and navigate to your desired folder</li>
+<li>Run the following commands :</li>
+</ol>
+<pre><code class="lang-bash">
+  git <span class="hljs-built_in">clone</span> https://github.com/maana-io/Q-tutorials.git
+</code></pre>
+<p><img src="../assets/animations/cli-gif1.gif" alt=""></p>
+<h2 id="installation">Installation</h2>
+<p>We use the GraphQL command line interface (CLI) with the Maana plugin:</p>
+<pre><code class="lang-bash">  npm i -g graphql-cli graphql-cli-maana
+</code></pre>
+<p><img src="../assets/animations/cli-gif2.gif" alt=""></p>
+<p><img src="../assets/animations/cli-gif3.gif" alt=""></p>
+<h2 id="setup">Setup</h2>
+<p><strong>We have included <a href="../glossary.html#a" class="glossary-term" title="">a</a> <code>.graphqlconfig</code> file preconfigured for this tutorial. Minimally, ensure the endpoint is correct for the Maana endpoint you are using. If you have any questions about the correct Maana endpoint please contact your Maana Solutions Architect Team, or your Internal Maana Administrator</strong></p>
+<p>Edit the preconfigured <code>.graphqlconfig</code>, copy the code below into your <code>.graphqlconfig</code> file, and be sure to <em>update your endpoint URL</em></p>
+<pre><code>{
+  &quot;projects&quot;: {
+    &quot;ckg&quot;: {
+      &quot;schemaPath&quot;: &quot;ckg.graphql&quot;,
+      &quot;extensions&quot;: {
+        &quot;endpoints&quot;: {
+          &quot;default&quot;: &quot;https://&lt;INSERT ENDPOINT URL&gt;:8443/graphql&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre><hr>
+<p><strong>Optionally</strong>, to create <a href="../glossary.html#a" class="glossary-term" title="">a</a> configuration from scratch, create <a href="../glossary.html#a" class="glossary-term" title="">a</a> CKG project and GraphQL endpoint, as in:</p>
+<pre><code class="lang-bash">gql init
+? Enter project name (Enter to skip): ckg
+? Local schema file path: ckg.graphql
+? Endpoint URL (Enter to skip): https://&lt;INSERT ENDPOINT URL&gt;:8443/graphql
+? Name of this endpoint, <span class="hljs-keyword">for</span> e.g. default, dev, prod: (default)
+? Subscription URL (Enter to skip):
+? Do you want to add other endpoints? No
+? What format <span class="hljs-keyword">do</span> you want to save your config <span class="hljs-keyword">in</span>? JSON
+
+About to write to /home/me/maana/training/.graphqlconfig:
+
+{
+  <span class="hljs-string">&quot;projects&quot;</span>: {
+    <span class="hljs-string">&quot;ckg&quot;</span>: {
+      <span class="hljs-string">&quot;schemaPath&quot;</span>: <span class="hljs-string">&quot;ckg.graphql&quot;</span>,
+      <span class="hljs-string">&quot;extensions&quot;</span>: {
+        <span class="hljs-string">&quot;endpoints&quot;</span>: {
+          <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;https://&lt;INSERT ENDPOINT URL&gt;8443/graphql&quot;</span>
+        }
+      }
+    }
+  }
+}
+
+? Is this ok? Yes
+</code></pre>
+<p><img src="../assets/animations/cli-gif4.gif" alt=""></p>
+<hr>
+<h2 id="authentication-with-maana">Authentication with Maana</h2>
+<p>Maana endpoints require <a href="../glossary.html#a" class="glossary-term" title="">a</a> valid (authenticated) user in order to prevent unauthorized access. You must first obtain <a href="../glossary.html#a" class="glossary-term" title="">a</a> token and the update the configuration to use the token by updating the endpoint configuration.</p>
+<h3 id="maana-q-v310-and-later">Maana Q v3.1.0 and later</h3>
+<p>After creating <a href="../glossary.html#a" class="glossary-term" title="">a</a> new <code>.graphqlconfig</code> file connecting to <a href="../glossary.html#a" class="glossary-term" title="">a</a> Maana API endpoint:</p>
+<ul>
+<li>Login to the Maana Knowledge Portal</li>
+<li>Click on your user icon and select your profile</li>
+<li>At the bottom of the profile page click the &apos;Get CLI Authentication Token&apos; button</li>
+<li>Go through the login process (again)</li>
+<li>Copy the generated auth token that shows up below the button</li>
+<li>In the terminal run <code>gql msignin</code> and when asked paste the Authentication Token into the prompt</li>
+</ul>
+<pre><code class="lang-sh">  $ gql msignin
+</code></pre>
+<p><img src="../assets/animations/cli-gif8.gif" alt=""></p>
+<ul>
+<li><p>Run <code>gql menv --shell &lt;your shell&gt;</code> in the current terminal window to run authenticated GraphQL calls.</p>
+<ul>
+<li>Example: Run <code>gql menv --shell bash</code> if you are using bash<pre><code class="lang-sh">$ gql menv --shell bash
+</code></pre>
+</li>
+<li>You will see output similar to:<pre><code class="lang-sh"><span class="hljs-built_in">export</span> MAANA_AUTH_TOKEN=&lt;token here&gt;
+<span class="hljs-comment"># Run this command to configure your shell</span>
+<span class="hljs-comment"># eval $(gql menv --shell bash)</span>
+</code></pre>
+</li>
+<li>Now run <code>eval $(gql menv --shell bash)</code> like it asks you at the bottom of the output<pre><code class="lang-sh"><span class="hljs-built_in">eval</span> $(gql menv --shell bash)
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Run <code>gql ping</code> to test out that the authentication works (you will get an error if it did not)</p>
+<pre><code class="lang-sh">  gql ping
+</code></pre>
+</li>
+</ul>
+<p><img src="../assets/animations/cli-gif9.gif" alt=""></p>
+<h3 id="maana-q-v305">Maana Q v3.0.5</h3>
+<ul>
+<li>Login to the Maana Knowledge Portal</li>
+<li>Click on your user icon and select your profile</li>
+<li>At the bottom of the profile page click the &apos;Get CLI Authentication Token&apos; button</li>
+<li>Login Again (For Enhanced Security)</li>
+<li>Copy the generated auth token that shows up below the button</li>
+</ul>
+<p><img src="../assets/animations/cli-gif5.gif" alt=""></p>
+<ul>
+<li>In the terminal add an environment variable for the auth token</li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-comment"># *nix based systems</span>
+<span class="hljs-built_in">export</span> AUTH_TOKEN_ENV=&lt;paste auth token here&gt;
+</code></pre>
+<pre><code class="lang-bat"><span class="hljs-comment">rem windows command line</span>
+<span class="hljs-built_in">set</span> AUTH_TOKEN_ENV=&lt;paste auth token here&gt;
+</code></pre>
+<pre><code class="lang-ps1"># windows power shell
+$Env:AUTH_TOKEN_ENV = &quot;&lt;paste auth token here&gt;&quot;
+</code></pre>
+<p><img src="../assets/animations/cli-gif7.gif" alt=""></p>
+<h3 id="additional-notes">Additional Notes</h3>
+<ul>
+<li>When you add another project to your <code>.graphqlconfig</code> file you can run <code>gql maddheaders --project &lt;Project Name&gt;</code> to add the headers to the new project.</li>
+<li>When you want to run the CLI against the Maana API in <a href="../glossary.html#a" class="glossary-term" title="">a</a> different terminal window you will need to run <code>gql env</code> again.</li>
+<li>If your authentication token expires you can run <code>gql mrefreshauth</code> to refresh the authentication token, when the Maana API is configured to allow the refreshing of authentication tokens.</li>
+</ul>
+<h2 id="create-the-service">Create the Service</h2>
+<p>The domain model for the tutorial has already been created: <code>model.gql</code>. This GraphQL SDL file contains only the types we care about: Well, Location, DrillingReport, DrillingProblem, ...</p>
+<p>We would like to have Maana completely manage these types, creating the boilerplate queries, mutations, and subscriptions covering the basic CRUD (Create, Read, Update, Delete) operations.</p>
+<p>We can use the GraphQL CLI with the Maana plugin command: <code>maddsvc</code> (&quot;add service&quot;):</p>
+<pre><code class="lang-bash">  Navigate to the root directory drill_prob path of the Maana-Q-Training:
+  $ <span class="hljs-built_in">cd</span> drill_prob
+  $ <span class="hljs-built_in">pwd</span>
+    /Q-tutorials/drill_prob
+</code></pre>
+<pre><code class="lang-bash">gql maddsvc <span class="hljs-string">&quot;Drilling Problems&quot;</span> <span class="hljs-_">-s</span> model.gql -p ckg
+Using endpoint default: {<span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://&lt;INSERT ENDPOINT URL&gt;:8443/graphql&quot;</span>}
+Read file: model.gql size: 483
+Sending query:
+
+      mutation addServiceSource(<span class="hljs-variable">$input</span>: AddServiceSourceInput!) {
+        addServiceSource(input: <span class="hljs-variable">$input</span>)
+      }
+
+&#x2714; Call succeeded:
+{<span class="hljs-string">&quot;addServiceSource&quot;</span>:<span class="hljs-string">&quot;50d759d5-983d-4ea2-9773-20077c9b823e&quot;</span>}
+</code></pre>
+<p><img src="../assets/animations/cli-gif10.gif" alt=""></p>
+<h2 id="update-the-config">Update the Config</h2>
+<p>The included <code>.graphqlconfig</code> file (also outlined below) already contains <a href="../glossary.html#a" class="glossary-term" title="">a</a> project, <code>dp</code>, that specified the schema file and endpoint for this service. However, the service ID needs to be updated to match the output from adding the service (above) to the code block below:</p>
+<pre><code>{
+  &quot;projects&quot;: {
+    &quot;ckg&quot;: {
+      &quot;schemaPath&quot;: &quot;ckg.graphql&quot;,
+      &quot;extensions&quot;: {
+        &quot;endpoints&quot;: {
+          &quot;default&quot;: {
+            &quot;url&quot;: &quot;https://&lt;INSERT ENDPOINT URL&gt;:8443/graphql&quot;,
+            &quot;headers&quot;: {
+              &quot;Authorization&quot;: &quot;Bearer ${env:AUTH_TOKEN_ENV}&quot;
+            }
+          }
+        }
+      }
+    },
+    &quot;dp&quot;: {
+      &quot;schemaPath&quot;: &quot;dp.graphql&quot;,
+      &quot;extensions&quot;: {
+        &quot;endpoints&quot;: {
+          &quot;default&quot;: {
+            &quot;url&quot;: &quot;https://&lt;INSERT ENDPOINT URL&gt;:8443/service/&lt;INSERT YOUR SERVICE ID FROM ABOVE HERE&gt;/graphql&quot;,
+            &quot;headers&quot;: {
+              &quot;Authorization&quot;: &quot;Bearer ${env:AUTH_TOKEN_ENV}&quot;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre><p><strong>Optionally</strong>, <em>to create this project from scratch:</em></p>
+<pre><code class="lang-bash">gql add-project
+? Enter project name <span class="hljs-keyword">for</span> new project: dp
+? Local schema file path: dp.graphql
+? Endpoint URL (Enter to skip): https://&lt;INSERT ENDPOINT URL&gt;:8443/service/&lt;INSERT YOUR SERVICE ID FROM ABOVE HERE&gt;/graphql
+? Name of this endpoint, <span class="hljs-keyword">for</span> e.g. default, dev, prod: (default)
+? Subscription URL (Enter to skip):
+? Do you want to add other endpoints? No
+
+Adding the following endpoints to your config:  dp
+? Is this ok? Yes
+</code></pre>
+<p>Again, we need to add the authorization header.</p>
+<ul>
+<li>In Maana <a href="../glossary.html#q" class="glossary-term" title="">Q</a> 3.1.0 or later just run the <code>gql maddheaders</code> command<pre><code class="lang-bash">  $ gql maddheaders
+</code></pre>
+</li>
+</ul>
+<p><img src="../assets/animations/cli-gif11.gif" alt=""></p>
+<ul>
+<li>In Maana <a href="../glossary.html#q" class="glossary-term" title="">Q</a> 3.5.0 will require adding it manually, check <a href="#v3.0.5">here</a> for instructions.</li>
+</ul>
+<h2 id="introspecting-the-service">Introspecting the Service</h2>
+<p>Only <a href="../glossary.html#a" class="glossary-term" title="">a</a> few types were specified for the <strong>domain model</strong>. Maana adds <a href="../glossary.html#a" class="glossary-term" title="">a</a> set of boilerplate types and operations as part of <a href="../glossary.html#a" class="glossary-term" title="">a</a> fully-managed service. The <strong>schema</strong> for this service can be retrieved by:</p>
+<pre><code class="lang-bash">gql get-schema -p dp
+</code></pre>
+<p>  <img src="../assets/animations/cli-gif13.gif" alt=""></p>
+<h2 id="loading-instance-data">Loading Instance Data</h2>
+<p>Now that the model has been turned into <a href="../glossary.html#a" class="glossary-term" title="">a</a> service, we can upload instance data to populate (&quot;hydrate&quot;) the graph:</p>
+<pre><code class="lang-bash">gql mload data/DrillingProblem.csv -p dp
+++++++
+gql mload data/DrillingReport.csv -p dp
+gql mload data/Well.csv -p dp
+</code></pre>
+<p><img src="../assets/animations/cli-gif14.gif" alt=""></p>
+<p>For convenience, these steps have been added to <a href="../glossary.html#a" class="glossary-term" title="">a</a> script file: <code>loadData.sh</code></p>
+<p><code>sh loadData.sh</code></p>
+<p><img src="../assets/animations/cli-gif15.gif" alt=""></p>
+<h1 id="maana-command-line-interface-cli-domain-modeling--querying">Maana Command Line Interface (CLI) Domain Modeling &amp; Querying</h1>
+<p>Here is <a href="../glossary.html#a" class="glossary-term" title="">a</a> step-by-step example of an end-to-end flow of creating <a href="../glossary.html#a" class="glossary-term" title="">a</a> domain model, hydrating it with instances, and querying it, all programmatically, using the standard <a href="https://github.com/graphql-cli/graphql-cli" target="_blank">graphql-cli </a>utility and the custom Maana plugin.</p>
+<p>Sample code can be found here: <a href="https://github.com/maana-io/Q-tutorials/tree/master/cli" target="_blank">https://github.com/maana-io/Q-tutorials/tree/master/cli</a>.</p>
+<p>It is published as an <a href="https://www.npmjs.com/package/graphql-cli-maana" target="_blank">NPM package</a>.</p>
+<p>It is best to make <a href="../glossary.html#a" class="glossary-term" title="">a</a> copy of this repo (delete the .git folder to detach it from GitHub). Then you can make all the changes you want, check it into <a href="../glossary.html#a" class="glossary-term" title="">a</a> different repo, etc.</p>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-sh">npm i -g graphql-cli graphql-cli-maana
+</code></pre>
+<h2 id="setup">Setup</h2>
+<p>The CLI uses <a href="../glossary.html#a" class="glossary-term" title="">a</a> <a href="https://github.com/graphcool/graphql-config/blob/master/specification.md" target="_blank">standard configuration format</a>, .graphqlconfig. The purpose is to provide configurations for the CLI tool.</p>
+<p>The tutorial repo you cloned above includes <a href="../glossary.html#a" class="glossary-term" title="">a</a> sample .graphqlconfig. It might be easier to edit it, but, if you wish, you can create your own by (deleting it and) following the instructions below.</p>
+<p>The config consists of:</p>
+<ul>
+<li><strong>projects</strong> : these are equivalent to Maana &quot;service name&quot; and tell the CLI where to find the schema for the endpoint</li>
+<li><strong>endpoints</strong> : these are the &quot;service endpoint URLs&quot;</li>
+</ul>
+<p>For consistency and simplicity, we recommend you use the same name for the <strong>Maana service</strong> , the <strong>project</strong> , and the <strong>endpoint</strong> (<a href="../glossary.html#e" class="glossary-term" title="">e</a>.<a href="../glossary.html#g" class="glossary-term" title="">g</a>., &quot;ckg&quot;, &quot;basic&quot;, &quot;projectX&quot;).</p>
+<p>To create <a href="../glossary.html#a" class="glossary-term" title="">a</a> configuration from scratch, create <a href="../glossary.html#a" class="glossary-term" title="">a</a> CKG project and GraphQL endpoint, as in:</p>
+<pre><code class="lang-bash">gql init
+? Enter project name (Enter to skip): ckg
+? Local schema file path: ckg.graphql
+? Endpoint URL (Enter to skip): https://&lt;maana host&gt;:8443/graphql
+? Name of this endpoint, <span class="hljs-keyword">for</span> e.g. default, dev, prod: (default)
+? Subscription URL (Enter to skip):
+? Do you want to add other endpoints? No
+? What format <span class="hljs-keyword">do</span> you want to save your config <span class="hljs-keyword">in</span>? JSON
+
+About to write to /home/me/maana/training/.graphqlconfig:
+
+{
+  <span class="hljs-string">&quot;projects&quot;</span>: {
+    <span class="hljs-string">&quot;ckg&quot;</span>: {
+      <span class="hljs-string">&quot;schemaPath&quot;</span>: <span class="hljs-string">&quot;ckg.graphql&quot;</span>,
+      <span class="hljs-string">&quot;extensions&quot;</span>: {
+        <span class="hljs-string">&quot;endpoints&quot;</span>: {
+          <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;https://&lt;maana host&gt;:8443/graphql&quot;</span>
+        }
+      }
+    }
+  }
+}
+
+? Is this ok? Yes
+</code></pre>
+<h2 id="authentication-with-maana">Authentication with Maana</h2>
+<p>Maana endpoints require <a href="../glossary.html#a" class="glossary-term" title="">a</a> valid (authenticated) user in order to prevent unauthorized access.</p>
+<h3 id="maana-q-v310-and-later"><a name="v3.1.0"></a>Maana Q v3.1.0 and later</h3>
+<p>After creating <a href="../glossary.html#a" class="glossary-term" title="">a</a> new <code>.graphqlconfig</code> file connecting to <a href="../glossary.html#a" class="glossary-term" title="">a</a> Maana API endpoint:</p>
+<ul>
+<li>Login to the Maana Knowledge Portal</li>
+<li>Click on your user icon and select your profile</li>
+<li>At the bottom of the profile page click the &apos;Get CLI Authentication Token&apos; button</li>
+<li>Go through the login process (again)</li>
+<li>Copy the generated auth token that shows up below the button</li>
+<li>In the terminal run <code>gql msignin</code> and when asked paste the Authentication Token into the prompt</li>
+<li>Run <code>gql menv --shell &lt;your shell&gt;</code> in the current terminal window to run authenticated GraphQL calls.<ul>
+<li>Example: Run <code>gql menv --shell bash</code> if you are using bash</li>
+<li>You will see output similar to:<pre><code>export MAANA_AUTH_TOKEN=&lt;token here&gt;
+# Run this command to configure your shell
+# eval $(gql menv --shell bash)
+</code></pre></li>
+<li>Now run <code>eval $(gql menv --shell bash)</code> like it asks you at the bottom of the output</li>
+</ul>
+</li>
+<li>Run <code>gql ping</code> to test out that the authentication works (you will get an error if it did not)</li>
+</ul>
+<h4 id="additional-notes">Additional Notes</h4>
+<ul>
+<li>When you add another project to your <code>.graphqlconfig</code> file you can run <code>gql maddheaders --project &lt;Project Name&gt;</code> to add the headers to the new project.</li>
+<li>When you want to run the CLI against the Maana API in <a href="../glossary.html#a" class="glossary-term" title="">a</a> different terminal window you will need to run <code>gql env</code> again.</li>
+<li>If your authentication token expires you can run <code>gql mrefreshauth</code> to refresh the authentication token, when the Maana API is configured to allow the refreshing of authentication tokens.</li>
+</ul>
+<h3 id="maana-q-v305"><a name="v3.0.5"></a>Maana Q v3.0.5</h3>
+<p>After creating <a href="../glossary.html#a" class="glossary-term" title="">a</a> new project connecting to <a href="../glossary.html#a" class="glossary-term" title="">a</a> Maana endpoint, you will need to setup the project to add an authentication header to the requests.</p>
+<ul>
+<li>Login to the Maana Knowledge Portal</li>
+<li>Click on your user icon and select your profile</li>
+<li>At the bottom of the profile page click the &apos;Get CLI Authentication Token&apos; button</li>
+<li>Go through the login process (again)</li>
+<li>Copy the generated auth token that shows up below the button</li>
+<li>In the terminal add an environment variable for the auth token</li>
+</ul>
+<pre><code class="lang-sh"><span class="hljs-comment"># *nix based systems</span>
+<span class="hljs-built_in">export</span> MAANA_AUTH_TOKEN=&lt;paste auth token here&gt;
+</code></pre>
+<pre><code class="lang-bat"><span class="hljs-comment">rem Windows command line</span>
+<span class="hljs-built_in">set</span> MAANA_AUTH_TOKEN=&lt;paste auth token here&gt;
+</code></pre>
+<pre><code class="lang-ps1"># Windows power shell
+$Env:MAANA_AUTH_TOKEN = &quot;&lt;paste auth token here&gt;&quot;
+</code></pre>
+<p>Add the authorization header to the Maana endpoint:</p>
+<pre><code class="lang-diff">     &quot;ckg&quot;: {
+      &quot;schemaPath&quot;: &quot;ckg.graphql&quot;,
+       &quot;extensions&quot;: {
+         &quot;endpoints&quot;: {
+<span class="hljs-deletion">-           &quot;default&quot;: &quot;https://&lt;maana host&gt;:8443/graphql&quot;</span>
+<span class="hljs-addition">+           &quot;default&quot;: {</span>
+<span class="hljs-addition">+             &quot;url&quot;: &quot;https://&lt;maana host&gt;:8443/graphql&quot;,</span>
+<span class="hljs-addition">+             &quot;headers&quot;: {</span>
+<span class="hljs-addition">+               &quot;Authorization&quot;: &quot;Bearer ${env:MAANA_AUTH_TOKEN}&quot;</span>
+<span class="hljs-addition">+             }</span>
+<span class="hljs-addition">+           }</span>
+         }
+       }
+     }
+</code></pre>
+<h2 id="create-the-model">Create the Model</h2>
+<p>Let&apos;<a href="../glossary.html#s" class="glossary-term" title="">s</a> first define <a href="../glossary.html#a" class="glossary-term" title="">a</a> simple schema to use, <a href="../glossary.html#e" class="glossary-term" title="">e</a>.<a href="../glossary.html#g" class="glossary-term" title="">g</a>., model.gql:</p>
+<pre><code class="lang-graphql">type Person {
+  id: ID!
+  name: String!
+  dob: String
+  employer: Employer
+}
+
+type Employer {
+  id: ID!
+  name: String!
+  ceo: Person
+}
+</code></pre>
+<h2 id="create-the-service">Create the Service</h2>
+<p>Now that we&apos;ve defined our model, we would like Maana to manage it for us (<a href="../glossary.html#i" class="glossary-term" title="">i</a>.<a href="../glossary.html#e" class="glossary-term" title="">e</a>., create <a href="../glossary.html#a" class="glossary-term" title="">a</a> graph and all of the boilerplate operations, such as add, updating, and deleting instances, querying them, generating events, etc.).</p>
+<p>Execute the <strong>maddsvc</strong> (&quot;add service&quot;) command, which takes the <strong>service name</strong> and the <strong>GraphQL model</strong> definition (<a href="../glossary.html#i" class="glossary-term" title="">i</a>.<a href="../glossary.html#e" class="glossary-term" title="">e</a>., your types, queries, mutations, and subscriptions):</p>
+<pre><code class="lang-bash">gql maddsvc Basic <span class="hljs-_">-s</span> basic/model.gql -p ckg
+Using endpoint default: {<span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://&lt;maana host&gt;:8443/graphql&quot;</span>}
+Read file: basic/model.gql size: 136
+Sending query:
+  mutation addServiceSource(<span class="hljs-variable">$input</span>: AddServiceSourceInput!) {
+    addServiceSource(input: <span class="hljs-variable">$input</span>)
+  }
+  ...
+&#x2714; Call succeeded:
+{<span class="hljs-string">&quot;addServiceSource&quot;</span>:<span class="hljs-string">&quot;1788c00e-3a29-4843-aa56-44ba374cf682&quot;</span>}
+</code></pre>
+<p>Take note of the generated service id, since we&apos;ll add it as <a href="../glossary.html#a" class="glossary-term" title="">a</a> new GraphQL <strong>endpoint</strong> to your CLI configuration.</p>
+<h2 id="update-the-config">Update the Config</h2>
+<p>Add another project to you graphql config using the following template to build your service url. Make sure that your url ends in <code>/graphql</code>.</p>
+<p>Template:</p>
+<pre><code>https://&lt;maana host&gt;:8443/service/&lt;service id&gt;/graphql
+</code></pre><p>Command:</p>
+<pre><code class="lang-bash">gql add-project
+? Enter project name <span class="hljs-keyword">for</span> new project: basic
+? Local schema file path: basic/schema.graphql
+? Endpoint URL (Enter to skip): &lt;service url&gt;
+? Name of this endpoint, <span class="hljs-keyword">for</span> e.g. default, dev, prod: (default)
+? Subscription URL (Enter to skip):
+? Do you want to add other endpoints? No
+
+Adding the following endpoints to your config:  basic
+? Is this ok? Yes
+</code></pre>
+<p>Again, we need to add the authorization header.</p>
+<ul>
+<li>In Maana <a href="../glossary.html#q" class="glossary-term" title="">Q</a> 3.1.0 or later just run the <code>gql maddheaders</code> command</li>
+<li>In Maana <a href="../glossary.html#q" class="glossary-term" title="">Q</a> 3.5.0 will require adding it manually, check <a href="#v3.0.5">here</a> for instructions.</li>
+</ul>
+<h2 id="introspecting-the-service">Introspecting the Service</h2>
+<p>Only <a href="../glossary.html#a" class="glossary-term" title="">a</a> few types were specified for the <strong>domain model</strong>. Maana adds <a href="../glossary.html#a" class="glossary-term" title="">a</a> set of boilerplate types and operations as part of <a href="../glossary.html#a" class="glossary-term" title="">a</a> fully-managed service. The <strong>schema</strong> for this service can be retrieved by:</p>
+<pre><code class="lang-bash">gql get-schema -p basic
+</code></pre>
+<h2 id="creating-instance-data">Creating Instance Data</h2>
+<p>Create instances from common data formats, such as CSV and JSON that conform to the model. The /basic examples of person and employer instance data are given below.</p>
+<h3 id="personcsv">person.csv</h3>
+<pre><code class="lang-baash">&quot;id&quot;,&quot;name&quot;,&quot;dob&quot;,&quot;employer&quot;
+&quot;P00&quot;,&quot;Han Solo&quot;,&quot;1942-07-13&quot;,&quot;E00&quot;
+&quot;P01&quot;,&quot;George Lucas&quot;,&quot;1944-05-14&quot;,&quot;E00&quot;
+</code></pre>
+<h3 id="employercsv">employer.csv</h3>
+<pre><code class="lang-baash">&quot;id&quot;,&quot;name&quot;,&quot;ceo&quot;
+&quot;E00&quot;,&quot;Lucasfilm Ltd.&quot;,&quot;P01&quot;
+</code></pre>
+<h3 id="personjson">person.json</h3>
+<pre><code class="lang-json">[
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;P00&quot;</span>,
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Han Solo&quot;</span>,
+    <span class="hljs-string">&quot;dob&quot;</span>: <span class="hljs-string">&quot;1942-07-13&quot;</span>,
+    <span class="hljs-string">&quot;employer&quot;</span>: <span class="hljs-string">&quot;E00&quot;</span>
+  },
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;P01&quot;</span>,
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;George Lucas&quot;</span>,
+    <span class="hljs-string">&quot;dob&quot;</span>: <span class="hljs-string">&quot;1944-05-14&quot;</span>,
+    <span class="hljs-string">&quot;employer&quot;</span>: <span class="hljs-string">&quot;E00&quot;</span>
+  }
+]
+</code></pre>
+<h3 id="employerjson">employer.json</h3>
+<pre><code class="lang-json">[
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;E00&quot;</span>,
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lucasfilm Ltd.&quot;</span>,
+    <span class="hljs-string">&quot;ceo&quot;</span>: <span class="hljs-string">&quot;P01&quot;</span>
+  }
+]
+</code></pre>
+<h2 id="loading-instance-data">Loading Instance Data</h2>
+<p>The above CSV and JSON data can be loaded by using the &apos;load&apos; GraphQL CLI command, passing the mutation to call, the data file, field mappings (if any). delimeters, etc.</p>
+<pre><code class="lang-bash">gql mload basic/person.json -p basic
+gql mload basic/employer.json -p basic
+</code></pre>
+<h2 id="using-default-queries">Using Default Queries</h2>
+<p>The boilerplate for persisted models includes add/update/delete mutations as well as get by id and get batch by ids queries that can be used from GraphiQL, the CLI, or from any GraphQL client. For the above &apos;basic&apos; example, we define the below queries.</p>
+<p>This is exactly the same format as you would use in GraphiQL ---- try cut-and-pasting the below into <a href="../glossary.html#a" class="glossary-term" title="">a</a> GraphiQL session against your service.</p>
+<h3 id="basicopsgql">basicOps.gql</h3>
+<pre><code class="lang-graphql">fragment personDetail on Person {
+  name
+  dob
+  employer {
+    ...employerDetail
+  }
+}
+
+fragment employerDetail on Employer {
+  name
+  ceo {
+    name
+  }
+}
+
+query person($id: ID!) {
+  person(id: $id) {
+    ...personDetail
+  }
+}
+
+query allPersons {
+  allPersons {
+    ...personDetail
+  }
+}
+
+query employer($id: ID!) {
+  employer(id: $id) {
+    ...employerDetail
+  }
+}
+
+query allEmployers {
+  allEmployers {
+    ...employerDetail
+  }
+}
+</code></pre>
+<p>These queries can be invoked from the command line, such as:</p>
+<pre><code class="lang-bash">gql query basic/basicOps.gql -p basic -o allEmployers
+gql query basic/basicOps.gql -p basic -o person --variables <span class="hljs-string">&quot;{\&quot;id\&quot;:\&quot;P01\&quot;}&quot;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ui.html" class="navigation navigation-prev " aria-label="Previous page: UI 101">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../prisma.md" class="navigation navigation-next " aria-label="Next page: Prisma">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CLI 101","level":"1.7.2","depth":2,"next":{"title":"Prisma","level":"1.7.3","depth":2,"path":"prisma.md","ref":"prisma.md","articles":[]},"previous":{"title":"UI 101","level":"1.7.1","depth":2,"path":"tutorials/ui.md","ref":"tutorials/ui.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials/cli.md","mtime":"2018-08-13T15:27:47.135Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-09T17:51:06.691Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
