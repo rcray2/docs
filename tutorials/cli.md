@@ -26,8 +26,7 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 ```
 
 
-![](https://i.imgur.com/dLtMDrL.gifv)
-
+![](https://i.imgur.com/UgXNoHJ.gifv)
 
 
 ## Installation
