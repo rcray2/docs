@@ -2,11 +2,8 @@
 description: Knowledge Technology - Developer Guide
 ---
 
-# Developer Guide
 
-## Research and Development Developer Guide
-
-## Introduction
+# Introduction
 
 ### Welcome to Maana
 
@@ -24,7 +21,7 @@ This guide is intended for the use of Solution Developers and Data Scientists, a
 
 Prior to working with the Maana Platform, it is suggested that you familiarize yourself with some basic terms and concepts that will help the make most out of your Maana portal experience. For a complete Glossary of Terms, please refer to the Appendix found at the back of this document, or go to the [Glossary](/glossary.md)  section of the Maana Corporate site.
 
-## The Maana Platform
+# The Maana Platform
 
 The Maana platform is used by solutions teams to deliver knowledge applications to their end users \(i.e., business users, SMEs, managers\). This “solution team” approach involves the collaboration of analysts, engineers, and data scientists. The platform is designed to build an enterprise-wide knowledge layer, utilizing search and exploration for solution development and delivery.
 
@@ -40,9 +37,7 @@ GraphQL provides a complete and understandable description of the data in the AP
 
 GraphQL creates a uniform API across your entire application without being limited by a specific storage engine. The developer provides functions for each field in the type system, and GraphQL calls them with optimal concurrency.
 
-#### Maana Platform Architecture and GraphQL
-
-![](docs/assets/animations/grapqlMicroservices.png)
+## Maana Platform Architecture and GraphQL
 
 For more information on using on Graph QL, please refer to the link provided below:
 
@@ -79,7 +74,7 @@ Unlike a traditional graph database, Maana incorporates arbitrary computation \(
 
 To address this, Maana proposes an explicit split between the data models \(i.e., GraphQL type definitions\) that a service uses and its operations \(i.e., GraphQL resolvers\). Maana will generate the appropriate managed service for such models using KindDB, Prisma, neo4j, etc. With this, the solution developer only provides the logic they care about and let the system take care of all the CRUD/ORM-like operations on the data.
 
-## Knowledge Microservices
+# Knowledge Microservices
 
 Knowledge microservices are a class of GraphQL services that are developed for the Maana platform. Unlike pure client-server or n-tier architectures, Maana's microservices act as peers in an asynchronous and loosely-coupled arrangement that promotes independent scaling and extensibility. They provide identity and access controls, graph persistence, search, machine learning, and natural language processing.
 
@@ -109,7 +104,7 @@ Examples of knowledge microservices include:
 | Geospatial |  | Image|
 | Geometric | |  |
 
-### Bots and Bot Actions
+## Bots and Bot Actions
 
 A *Bot* is a Knowledge Microservice that “listens” for specific events on a system bus, and acts automatically when such events happen to mine and enrich the graph. They provide specialized queries and mutations that perform *BotActions*, allowing the bot to provide asynchronous status updates.
 
@@ -124,16 +119,16 @@ There are two primary scenarios to consider here:
  1. Event Handling
  2. Direct Query/Mutations
 
-#### Event Handling
+### Event Handling
 
 When a Knowledge Service subscribes to and handles an event, such as "fileAdded," it can (optionally) create an instance of a BotAction Kind by mutating the CKG. As the service performs its operation, it can periodically update the progress (if it is deterministic) and update the status and report errors.
 
-#### Queries and Mutations
+### Queries and Mutations
 
 A user can invoke a query or mutation either explicitly (e.g., train a classifier on labeled data) or implicitly (i.e., as part of query graph). In such cases, the service exposes such queries and mutations as returning a BotAction.
 
 
-### Kinds
+## Kinds
 
 All Kinds (concepts, types) are associated with a service. This service is said to provide the (entities of) the Kind. Many Kinds are purely extensional (i.e., data) and do not have custom CRUD behavior. These Kinds are automatically managed by the Computational Knowledge Graph (CKG) and stored in the KindDB, where they are indexed for efficient search and querying (including sophisticated entity concurrences).
 
@@ -143,11 +138,11 @@ Services also depend on existing Kinds and queries, mutations, and events. The s
 
 The development of a Maana Knowledge Application solution can be best described in five stages:
 
-1.  Design
-2.  Local Service (Standalone)
-3.  Local Service  (Maana)
-4.  Unmanaged Service
-5.  Managed Service
+1.  *Design*
+2.  *Local Service (Standalone)*
+3.  *Local Service  (Maana)*
+4.  *Unmanaged Service*
+5.  *Managed Service*
 
 ## Design Stage
 
@@ -261,8 +256,11 @@ The Maana Catalog is the repository for all components that can be used as part 
 ## Defining a Model in Maana
 
 The following documentation uses *XXX.XXX.XXX.XXX* facing to represent the public URL of the system. All of the following examples use the GraphiQL endpoint - which is interactive, programmatic access conducted through the GraphQL endpoint.  GraphQL API is organized around three main building blocks:
+
 1. Schema
+
 2. Queries
+
 3. Resolvers
 
 Queries can be executed via GET or POST, with either the body of the query as the query string or in the body of the POST. All mutations must use the POST endpoint and have the header content type set to application/json. Also, the GraphQL server needs a resolver to know what to do with an incoming query.
@@ -480,6 +478,12 @@ Operators that can be used:
 *	for Strings : "==" , "!=" , "oneof"
 *	for Numbers (Int and Float) :  "<", "<=", ">", ">="
 
+# Developing Knowledge Microservices
+
+## Project Setup
+
+To begin a project setup, begin by selecting a preferred language, and follow the instructions provided in the following sections for customization.
+
 
 # Maana Knowledge Service Templates
 
@@ -542,257 +546,3 @@ Remote: Mixed Environments - A Maana deployment is hosted elsewhere (e.g., Azure
 Not supported in Version 3.0?
 
 If local and developing an a (locally) deployed service, then "docker stop" it and run/debug it manually.
-
-
-
-
-
-
-
-
-
-
-BREAK
-_______
-
-
-
-The Maana platform is built from a network of **GraphQL**-based **microservices**. Unlike pure client-server or n-tier architectures, Maana's microservices act as peers in an asynchronous and loosely-coupled arrangement that promotes independent scaling and extensibility. These services provide identity and access controls, graph persistence, search, machine learning, and natural language processing. Ultimately, these services provide reasoning capabilities to Knowledge Applications, which help solve domain-specific problems and support optimal decision-making capable of learning over time.
-
-This guide is intended for Solution Developers and Data Scientists and describes how to develop such services \(aka "bots"\) and applications and operationalize them in a production setting.
-
-## GraphQL and Microservices
-
-At the core of any Maana solution sits a Knowledge Graph, which consists of **concepts** and **properties**, **instances** and **values**, and **relations** and **links**. For example, consider the concept of a _ContainerShip_ with properties _name_, _length_, _position_, etc. A specific instance \(entity\) has values for each of the properties, such as the Maersk Viking with a length of _400 meters_, ... Such properties can be _scalar_ \(e.g., numbers, strings, dates\) or might refer to other concepts/instances, e.g., ships _hold Cargo_. In some cases, property values for an instance are simply stored, since they don't change \(often\). In other cases, they are dynamically computed, such as a ship's _weight_ \(which depends on its cargo\) or its _current position_ \(which requires getting a GPS reading\).
-
-**GraphQL** is a data query language created by Facebook and open-sourced in 2015 as an alternative to REST interfaces. Maana uses GraphQL to represent and expose its Knowledge Graph
-
-Unlike a traditional **graph database**, Maana incorporate arbitrary computation \(through custom GraphQL resolvers\) and distributes the graph into subgraphs managed by different **microservices**, optionally with their own dedicated persistence mechanism.
-
-While this approach allows for flexibility, it places more responsibility on the microservices to provide their own storage. To address this, Maana proposes an explicit split between the data models \(i.e., GraphQL type definitions\) that a service uses and its operations \(i.e., GraphQL resolvers\). Maana will generate the appropriate managed service for such models using **KindDB**, Prisma, neo4j, ... The solution developer, then, only provides the logic they care about and let the system take care of all the CRUD/ORM-like operations on the data.
-
-The **Computational Knowledge Graph \(CKG\)**, itself a microservice, provides automatic persistence, boilerplate queries and mutations, and service orchestration capabilities. Taken together, these service allow the solution developer to focus on **designing GraphQL schemas** and implementing **computational resolvers** only where needed.
-
-### GraphQL Learning Resources
-
-* [How to GraphQL](https://www.howtographql.com/)
-
-## Knowledge Microservices and Bots
-
-A **GraphQL service** \(endpoint\) consists of:
-
-* **types**
-* **queries**
-* **mutations**
-* **events** \(pub/sub\)
-
-A **Knowledge Microservice** is a GraphQL service that also includes:
-
-* authenticated access
-* client/server boilerplate
-* reliable messaging using RabbitMQ
-* lifecycle management \(info, register, deregister\)
-* Docker containerization and automatic scaling/load balancing
-
-A **Bot** is a Knowledge Microservice that provides specialized queries and mutations that perform [**BotActions**](https://confluence.corp.maana.io/display/RD/Bot+Actions), which allow the bot to provide asynchronous status updates. This enables user interface components to reflect the latest status of **long-running operations** or **automatically triggered events**, e.g., entity recognition, new concept creation, classification.
-
-All **Kinds** \(concepts, types\) are associated with a service. This service is said to _provide_ the \(entities of\) the Kind. Many Kinds are purely extensional \(i.e., data\) and do not have custom CRUD behavior. Such Kinds are automatically managed by CKG and stored in the KindDB, where it will be indexed for efficient search and querying \(including sophisticated entity cooccurrences\).
-
-Services also **depend** on **existing** **Kinds** and **queries**, **mutations**, and **events**. The services that provide these Kinds \(which may be fully managed by CKG/KindDB\) can be **imported** into a new service purely through GraphQL and specified in a **manifest** that is used to **create and register** a new service. This process will result in a **merged schema** on a **service-specific endpoint** that the newly developed service uses for _all_ Maana GraphQL communication \(non-pub/sub\).
-
-### Development Stages
-
-* **Design:** focus on GraphQL types \(**Kinds**, **Properties**, **Relations**\), queries and mutations \(often based on **Problem Questions**\), and events \(consumed and produced\)
-* **Local Service \(Standalone\)**: choose programming language, identify dependencies \(libraries, existing services and domain models\), core logic to satisfy GraphQL interface contract
-* **Local Service** \(**Maana\)**: continue local development, connecting to a **remote** Maana deployment \(e,g, Azure\) to consume and produce GraphQL other services via your **custom endpoint**
-* **Unmanaged Service**: deploy your service via your own means \(e.g., Heroku\), but make it accessible to Maana to communicate to for call and event dispatching
-* **Managed Service**: Dockerize your service and make it available in a registry that Maana has access to \(e.g., Azure\)
-
-The following sections will elaborate on each of these stages.
-
-#### Stage: Design
-
-At this point, the overall problem to be solved has been analyzed and a **domain model** and set of _decomposed_ **problem questions** has been generated, some discussion of **entity sources** and **data science** has taken place, and it is now time to code one or more **Knowledge Microservices** to provide some new **concepts** \(types, Kinds\) along with **queries**, **mutations**, and **events** that involve them.
-
-**Focus on the GraphQL**. This is the entire description of and interface to the _world_ for the Knowledge service/bot. Define the **GraphQL SDL** a file, e.g., \`model.gql\`, including custom queries, mutations, and publications/subscriptions. Plan the custom **resolvers**, i.e., what is their **core logic**?
-
-#### Stage: Local Service \(Standalone\)
-
-With at least an initial design complete, the following implementation decisions must be made:
-
-* Are there existing Kinds and Services that can be reused?
-* Are their existing code libraries or ML models that can be reused?
-* What is the best programming language for this task?
-* Is there reference data or domain data?
-* Are there long-running tasks?
-* What are the scale, performance, and capacity factors?
-
-Once a programming language has been chosen, then an [existing project template](https://github.com/maana-io/Q-ksvc-templates) can be used to scaffold a new Knowledge Microservice/Bot in Scala/JVM, Python, JavaScript, ...
-
-Development of core logic or machine learning solution happens as it normally would, writing, testing, and debugging code or improving model accuracy.
-
-The Knowledge Service is a standard GraphQL endpoint, so it can be run and tested within the development environment and used via [Maana CLI](https://www.npmjs.com/package/graphql-cli-maana), its own exposed [GraphiQL](https://github.com/graphql/graphiql), a standalone [GraphQL Playground](https://github.com/prismagraphql/graphql-playground), etc.
-
-Dependent types and services are **imported** into the service **model** using a modified version of a technique from [graphql-import](https://github.com/prismagraphql/graphql-import):
-
-```graphql
-# import File, Url, MimeType from io.maana.core @PASSTHRU
-
-input CrawlOptions {
-  url: Url
-  ...
-}
-
-
-...
-
-
-type Mutation {
-  crawl(input: CrawlOptions): BotAction
-  ...
-}
-```
-
-#### Stage: Local Service \(Maana\)
-
-In the previous stage, it is likely that various calls/services were stubbed or mocked because they required accessing a Maana cluster. It is now time to interact with a Maana deployment, typically one dedicated to development.
-
-Communication to a Maana system requires the use of authentication. This is configured differently, based on the language/framework being used. Refer to the project template documentation used to scaffold the Knowledge service project.
-
-The service being development must be registered with Maana. This is typically done programmatically using the Maana CLI by specifying a **manifest** that describes the service and its dependencies. For example:
-
-```javascript
-{
-  id: "io.maana.azure.crawler",
-  name: "Maana Azure Storage Crawler Service",
-  dockerRegistry: null,
-  hostedUrl: null,
-}
-```
-
-The result of registering a new service with Maana is that CKG will generate a dedicated service endpoint for the new service, e.g., [https://knowledge.acme.com/service/io.maana.azure.crawler:7331.](https://knowledge.acme.com/service/io.maana.azure.crawler:7331.) This enables the standalone service to communicate to Maana, but does not allow Maana to dispatch calls to the standalone service due to network connectivity restrictions. \(This will be overcome in the next stages.\)
-
-The full GraphQL schema for a service manifest is:
-
-```graphql
-# from io.maana.system
-type ServiceManifest {
-  id: ID!
-  name: String
-  description: Text
-  registeredOn: DateTime
-  registeredBy: User
-  dockerRegistry: Url
-  hostedUrl: Url
-  modelSdl: String
-}
-```
-
-#### Stage: Unmanaged Service
-
-When it is time to have full participation in the Maana processing network, i.e., having its endpoint services consumed by other services, user interfaces, or automatically based on event subscription, then Maana's CKG must be able to communicate to the service. This means that the service must itself be deployed to a host that is accessible from the Maana cluster, e.g., Heroku, Azure, AWS, on-premise. In this configuration, the service owner is responsible for deploying, monitoring, scaling, securing, etc. the service, since Maana only has knowledge of a GraphQL endpoint URL and the schema it provides.
-
-See the [Deploy to Heroku tutorial](https://confluence.corp.maana.io/display/RD/Training).
-
-#### Stage: Managed Service
-
-Maana can completely manage a **containerized** Knowledge Microservice/Bot, by specifying a Docker registry that the Maana deployment has access to \(e.g., DockerHub, Azure\). The following additional information is required when configuring a service to be managed by Maana:
-
-* scale stuff ??
-* ?? [Andrey Batyuk](https://confluence.corp.maana.io/display/~andrey)
-
-### Debugging a Knowledge Microservice
-
-[Andrey Batyuk](https://confluence.corp.maana.io/display/~andrey)
-
-### The BotAction Protocol
-
-See [technical design note](https://confluence.corp.maana.io/display/RD/Bot+Actions).
-
-## Knowledge Applications
-
-Solution developers can develop knoweldge applications on top of the MAANA knwoledge graph.
-
-* who is the audience for the applications?
-  * SME and are looking for answers to specific questions \(i.e. Given a ship, a ship route and an omitted port, what re-route options can be considered to minimize trip duration for the loads onboard?\)
-* what type of applications can be developed?
-  * custom web apps, Power BI apps, Tableau, Spotfire? others?
-* what are the steps to build an application?
-* how does a developer publish and manage/share/update/delete an app?
-
-## Development Environments
-
-### Visual Studio Code
-
-Most people run the ["insiders" edition](https://code.visualstudio.com/insiders/) to have access to latest features.
-
-#### Command Line
-
-Add VS Code to your path so you can invoke it from the command line
-
-```bash
-export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
-```
-
-The 'code' command will now be available in your terminal.
-
-#### Recommended Plugins
-
-```bash
-code --install-extension PeterJausovec.vscode-docker
-code --install-extension christian-kohler.npm-intellisense
-code --install-extension christian-kohler.path-intellisense
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension eamodio.gitlens
-code --install-extension eg2.vscode-npm-script
-code --install-extension esbenp.prettier-vscode
-code --install-extension kumar-harsh.graphql-for-vscode
-code --install-extension mikestead.dotenv
-code --install-extension ms-azuretools.vscode-azurefunctions
-code --install-extension ms-vscode.azure-account
-code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension robertohuertasm.vscode-icons
-```
-
-#### Settings
-
-Access user settings from "Code Insiders / Preferences / Settings" and paste the following settings in the "User Settings" tab.
-
-```javascript
-{
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Default High Contrast",
-    "editor.fontFamily": "'Roboto Mono Light For Powerline', Menlo, Monaco, 'Courier New', italic",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "eslint.autoFixOnSave": true,
-    "files.associations": {
-        "*.js": "javascriptreact"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "window.zoomLevel": 0,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    },
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/.git": true
-    },
-    "git.autofetch": true
-}
-```
-
-Some of these are team style, some are personal preference \(e.g., workbench.colorTheme\).
-
-Document generated by Confluence on Jul 25, 2018 06:05
-
-[Atlassian](http://www.atlassian.com/)
