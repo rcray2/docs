@@ -11,7 +11,7 @@ Maana was founded with the vision of using technology to systematize the world�
 
 ### Better and Faster
 
-In 2013 Maana invented a new way to represent industrial knowledge mathematically, using the Maana Patented Computational Knowledge Graph™. This unique technology enables industrial companies to encode human expertise and data from across silos into digital knowledge, eliminating the need to move data and enabling the creation of thousands of models at scale, through the re-usability of models across the enterprise.
+In 2013 Maana invented a new way to represent industrial knowledge mathematically, using the patented Maana Computational Knowledge Graph™. This unique technology enables industrial companies to encode human expertise and data from across silos into digital knowledge, eliminating the need to move data and enabling the creation of thousands of models at scale, through the re-usability of models across the enterprise.
 
 ### Scope
 
